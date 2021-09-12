@@ -36,7 +36,7 @@ for delivery to analysts.
 
 **#2: Analyze the table for any issues that you’ve found in the data. This could include obvious coding errors or duplicates. Use your best judgement to transform and update the table into a new table, in your schema, named oh_cd11_clean. List the changes made and provide all code that was used to do so. Also, list any checks that you made, but didn’t find any errors.**
 
-* Corresponding Jupyter Notebook: poc/cleaning_file.ipynb**
+* Corresponding Jupyter Notebook: poc/cleaning_file.ipynb
 
 
 **#3: Provide counts of exp_02 with a column indicating if they voted in the 2020 general election (g2020 column).**
