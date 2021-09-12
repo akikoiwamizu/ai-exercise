@@ -1,0 +1,7 @@
+# Files + Credentials
+files/*
+keys/*
+
+# Python + Jupyter
+__pycache__/*
+poc/.ipynb_checkpoints/*
