@@ -151,6 +151,12 @@ def copy_to_redshift(
     rconn.execute(sql=transfer_query, quiet=True, db=dest_db)
     print("Redshift Transfer Complete!")
 
+    # Confirm table is populated and exists!
+    redshift.get_num_rows(schema_name=dest_schema, table_name=dest_tablename, db=dest_db)
+
+    print("Closing connection to database...")
+    rconn.close(db=dest_db)
+
 
 def run(
     source_dir: str,

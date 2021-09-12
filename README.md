@@ -18,7 +18,7 @@ Usage Examples:
 ```python
 >>> import main
 >>> main.run("files", "oh11.csv", "oh11_schema.txt", "dev", "hotel.oh_cd11_raw")
->>> main.copy_to_redshift("files", "oh11.csv", "oh11_schema.txt", "dev", "hotel.oh_cd11_raw", "s3://ai-hotel/")
+>>> main.run("files", "oh_cd11_clean.csv", "oh11_schema.txt", "dev", "hotel.oh_cd11_clean")
 ```
 
 ## Overview

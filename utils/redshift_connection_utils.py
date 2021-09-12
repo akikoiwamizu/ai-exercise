@@ -5,7 +5,7 @@ Wrapper for managing connections to Redshift.
 import psycopg2
 import sys
 
-import credential_manager_utils as credential_manager
+from utils import credential_manager_utils as credential_manager
 
 
 _REDSHIFT_CREDENTIALS = credential_manager.read("redshift_creds")
@@ -63,3 +63,14 @@ def execute(sql: str, quiet: bool = False, db: str = "dev") -> list:
         raise
 
     return out
+
+
+def close(db: str) -> None:
+    """Close down any shared connections."""
+
+    global _SAVED_CONNECTIONS
+    key = f"db={db}"
+
+    if key in _SAVED_CONNECTIONS:
+        _SAVED_CONNECTIONS[key].close()
+        del _SAVED_CONNECTIONS[key]

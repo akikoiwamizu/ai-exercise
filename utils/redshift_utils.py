@@ -4,7 +4,7 @@ Wrapper for prepping CSVs for Redshift and generating table schemas.
 
 import csv
 
-import redshift_connection_utils as rconn
+from utils import redshift_connection_utils as rconn
 
 
 def check_schema_exists(schema_name: str, db: str) -> bool:
@@ -43,3 +43,12 @@ def get_schema(source_dir: str, source_file: str, dest_table: str) -> str:
     sql = sql + schema + "); COMMIT;"
 
     return sql
+
+
+def get_num_rows(schema_name: str, table_name: str, db: str) -> None:
+    """Count the rows in a Redshift table."""
+
+    rconn.execute("BEGIN;")
+    num_rows = rconn.execute(f"SELECT COUNT(*) FROM {schema_name}.{table_name};", db=db)[0][0]
+    rconn.execute("COMMIT;")
+    print(f"Found {num_rows} total rows in transferred table: {schema_name}.{table_name}")

@@ -1,7 +1,12 @@
 # Files + Credentials
 files/*
 keys/*
+.git/*
 
 # Python + Jupyter
 __pycache__/*
+utils/__pycache__/*
 poc/.ipynb_checkpoints/*
+
+# System Junk
+.DS_Store
