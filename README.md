@@ -41,22 +41,22 @@ for delivery to analysts.
 
 **#3: Provide counts of exp_02 with a column indicating if they voted in the 2020 general election (g2020 column).**
 
-* Corresponding SQL Scripts: sql/
+* Corresponding SQL Scripts: sql/q3.sql
 
 
 **#4: Provide counts of exp_01 by state house district (state_hd column).**
 
-* Corresponding SQL Scripts: sql/
+* Corresponding SQL Scripts: sql/q4.sql
 
 
 **#5: Provide the number of unique addresses on the file.**
 
-* Corresponding SQL Scripts: sql/
+* Corresponding SQL Scripts: sql/q5.sql
 
 
 **#6: Provide the average of exp_03 segmented by decile from smallest to largest.**
 
-* Corresponding SQL Scripts: sql/
+* Corresponding SQL Scripts: sql/q6.sql
 
 
 
